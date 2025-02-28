@@ -1,58 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+:root {
+  --border-radius: 12px;
+  --primary-color: #0166ff;
+  --hover-color: #0553c9;
+  --error-color: red;
 }
 
-h1 {
-    margin: 1rem;
+body,
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.container {
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 50px;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
 }
 
-.card__email {
-    font-size: 1rem;
+form > div {
+  display: flex;
+  flex-direction: column;
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
-}
-
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+form label {
+  width: fit-content;
+  margin-bottom: 8px;
 }
 
 input[type="text"] {
-    padding: .25rem;
+  border-radius: var(--border-radius);
+  border: solid 1px lightgrey;
+  padding: 8px 16px;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+.button {
+  background-color: var(--primary-color);
+  width: fit-content;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  color: var(--primary-color);
+  width: fit-content;
+}
+
+.link:hover {
+  color: var(--hover-color);
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.fighters-table {
+  margin-block: 30px;
+  width: 100%;
+}
+
+thead {
+  background-color: lightgrey;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+thead th {
+  padding: 4px 8px;
+}
+
+td {
+  border: solid 1px lightgrey;
+  padding: 4px 8px;
+}
+
+tr td:first-of-type {
+  width: 40%;
+}
+
+tr td:nth-of-type(2) {
+  width: 30%;
+}
+
+tr td:nth-of-type(3) {
+  width: 30%;
 }

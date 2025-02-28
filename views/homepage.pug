@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+
+    div(class="container")
+      h1 UFC fighters table
+
+      if fighters.length > 0 
+        table(class="fighters-table")
+          thead
+            tr
+              th Fighter Name
+              th Fighting Style
+              th Fight Record
+          tbody
+            each fighter in fighters
+              tr
+                td= fighter.properties.fighter_name
+                td= fighter.properties.fighting_style
+                td= fighter.properties.fight_record
+
+      a(href="/update-cobj" class="button") Add to this table
