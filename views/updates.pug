@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+
+  div(class="form-container")
+    h1 Create UFC fighters
+    
+
+      div(class="error")
+        p= error
+
+    form(action="/update-cobj" method="POST")
+      div
+        label(for="fighter-name") Fighter Name
+        input(type="text" id="fighter-name" name="fighter-name" required)
+      div
+        label(for="fighter-style") Fighter Style
+        input(type="text" id="fighter-style" name="fighter-style" required)
+      div
+        label(for="fight-record") Fight Record
+        input(type="text" id="fight-record" name="fight-record" required)
+      div
+        input(type="submit" value="Submit")
+
+    a(href="/" class="home-button") Return to the homepage
