@@ -14,9 +14,9 @@ body,
   padding: 0;
 }
 
-.form-container {
+.container {
   margin: 0 auto;
-  width: fit-content;
+  width: 500px;
   margin-top: 50px;
 }
 
@@ -43,7 +43,7 @@ input[type="text"] {
   padding: 8px 16px;
 }
 
-input[type="submit"] {
+.button {
   background-color: var(--primary-color);
   width: fit-content;
   outline: none;
@@ -53,21 +53,22 @@ input[type="submit"] {
   color: white;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-input[type="submit"]:hover {
+.button:hover {
   cursor: pointer;
   background-color: var(--hover-color);
 }
 
-.home-button {
+.link {
   display: block;
   margin-top: 20px;
   color: var(--primary-color);
   width: fit-content;
 }
 
-.home-button:hover {
+.link:hover {
   color: var(--hover-color);
 }
 
@@ -75,4 +76,36 @@ input[type="submit"]:hover {
   color: var(--error-color);
   font-size: 16px;
   margin-top: 16px;
+}
+
+.fighters-table {
+  margin-block: 30px;
+  width: 100%;
+}
+
+thead {
+  background-color: lightgrey;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+thead th {
+  padding: 4px 8px;
+}
+
+td {
+  border: solid 1px lightgrey;
+  padding: 4px 8px;
+}
+
+tr td:first-of-type {
+  width: 40%;
+}
+
+tr td:nth-of-type(2) {
+  width: 30%;
+}
+
+tr td:nth-of-type(3) {
+  width: 30%;
 }
