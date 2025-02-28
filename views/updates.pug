@@ -6,7 +6,7 @@ html
     link(rel="stylesheet", href="/css/style.css")
   body
 
-  div(class="form-container")
+  div(class="container")
     h1 Create UFC fighters
     
 
@@ -18,12 +18,12 @@ html
         label(for="fighter-name") Fighter Name
         input(type="text" id="fighter-name" name="fighter-name" required)
       div
-        label(for="fighter-style") Fighter Style
-        input(type="text" id="fighter-style" name="fighter-style" required)
+        label(for="fighting-style") Fighter Style
+        input(type="text" id="fighting-style" name="fighting-style" required)
       div
         label(for="fight-record") Fight Record
         input(type="text" id="fight-record" name="fight-record" required)
       div
-        input(type="submit" value="Submit")
+        input(type="submit" value="Create" class="button")
 
-    a(href="/" class="home-button") Return to the homepage
+    a(href="/" class="link") Return to the homepage
